@@ -1,7 +1,6 @@
 package edu.canisius.csc213.util;
 
 import java.time.LocalDateTime; 
-
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.IOException;
@@ -23,7 +22,7 @@ public class SysDebugger {
             // On Windows, you might do: ProcessBuilder pb = new ProcessBuilder("tasklist");
             ProcessBuilder pb = new ProcessBuilder("ps", "-e");
             Process process = pb.start();
-            
+
             try (BufferedReader br = new BufferedReader(
                      new InputStreamReader(process.getInputStream()))) {
                 String line;
@@ -37,5 +36,13 @@ public class SysDebugger {
         }
     }
 
+    /**
+     * Logs the current date and time.
+     */
+    public static void logCurrentDateTime() {
+        LocalDateTime now = LocalDateTime.now();
+        System.out.println("=== Current Date & Time ===");
+        System.out.println(now);
+        System.out.println("===========================");
+    }
 }
-

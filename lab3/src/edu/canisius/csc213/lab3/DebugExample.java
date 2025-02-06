@@ -1,4 +1,5 @@
 package edu.canisius.csc213.lab3;
+import edu.canisius.csc213.util.SysDebugger;
 
 import edu.canisius.csc213.util.*;
 
@@ -24,7 +25,7 @@ public class DebugExample {
             SysDebugger.logRunningProcesses();
 
 	    // 3)Log the time of the crash
-	    
+	    edu.canisius.csc213.util.SysDebugger.logCurrentDateTime();
         }
 
         System.out.println("Exiting program.");
