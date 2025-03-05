@@ -16,7 +16,7 @@ When using Maven in a properly packaged Java project, you **must** follow the co
 So, your first step is to **reorganize** your project so that it looks like this:  
 
 ```
-usercode/
+lab6/
 ├── src/
 │   └── main/
 │       └── java/
@@ -89,7 +89,7 @@ mvn install
 
 ### **What happens after `install`?**  
 
-Check your project directory. You will see a new folder called `target/`. Open it and examine its contents—you should see a JAR file named **`Lab8-1.jar`**.  
+Check your project directory. You will see a new folder called `target/`. Open it and examine its contents—you should see a JAR file named **`Lab6-1.jar`**.  
 
 This JAR file is the **output** of the build process. Its name is determined by attributes in the `pom.xml` file, which define the **artifact name**.  
 
@@ -98,7 +98,7 @@ This JAR file is the **output** of the build process. Its name is determined by 
 From the terminal, navigate (`cd`) into the `target/` directory, then run:  
 
 ```sh
-java -jar Lab8-1.jar
+java -jar Lab6-1.jar
 ```
 
 Not much happens, right? That’s because this JAR file is **not yet executable**. Let’s fix that!  
@@ -110,11 +110,12 @@ Not much happens, right? That’s because this JAR file is **not yet executable*
 You need to modify your `pom.xml` to **add a custom build**. This will generate an **executable JAR file**—one that runs the `main` method of `Book.java`.  
 
 But remember:  
-- It needs to **include third-party dependencies** (like Apache Commons Logging).  
+- It needs to **include third-party dependencies** (like Apache Commons Logging).
+- Here, you are making what is called an uber jar.  It has everything a person needs to run it!  
 - The output JAR file **must** be named:  
 
   ```
-  Lab8-1-jar-with-dependencies.jar
+  Lab6-1-jar-with-dependencies.jar
   ```
 
 How do you do this? **Google it!** Or ask ChatGPT. 😉  
@@ -125,23 +126,13 @@ How do you do this? **Google it!** Or ask ChatGPT. 😉
 2. Run the new JAR file:  
 
    ```sh
-   java -jar Lab8-1-jar-with-dependencies.jar
+   java -jar Lab6-1-jar-with-dependencies.jar
    ```
 
 If it works, it will print **information about "The Great Gatsby"!** 📖✨  
 
 ---
 
-## **Step 4: Passing the Tests**  
+## **Step 4: Add Your Jar to D2L**  
 
-If you have completed everything correctly, **all tests should pass!** ✅  
-
----
-
-🎉 **Congratulations!** You’ve successfully:  
-✅ Set up a Maven project with the correct structure.  
-✅ Added dependencies in `pom.xml`.  
-✅ Used Maven lifecycle commands.  
-✅ Created an executable JAR file.  
-
-Now you’re one step closer to mastering **Maven and Java project builds**! 🚀
+If you have completed everything and you see that message about the Great Gatsby, simply upload the Lab6-1-jar-with-dependencies.jar to D2L.

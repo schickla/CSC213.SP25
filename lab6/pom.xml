@@ -17,12 +17,6 @@
     
     <!-- Dependencies, plugins, build profiles, etc. can be specified as needed -->
     <dependencies>
-            <!-- https://mvnrepository.com/artifact/commons-logging/commons-logging -->
-        <dependency>
-            <groupId>commons-logging</groupId>
-            <artifactId>commons-logging</artifactId>
-            <version>1.2</version>
-        </dependency>
     </dependencies>
 
 </project>
