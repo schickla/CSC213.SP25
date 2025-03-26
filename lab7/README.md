@@ -82,7 +82,7 @@ _________________________
 ## Submission Instructions  
 
 1. **GitHub Repository**  
-   - Commit and push your code to the **Lab 7 branch** in a **private Git repository**.  
+   - Commit and push your code to a **private Git repository**.  
    - Add your **instructor as a collaborator** to the repository.  
 
 2. **D2L Submission**  
